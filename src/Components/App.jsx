@@ -1,9 +1,13 @@
 import '../styles/App.css';
 import Banner from "./Banner";
+import ShoppingList from "./ShoppingList";
 
 function App() {
   return (
-    < Banner />
+    <>
+      < Banner />
+      < ShoppingList />
+    </>
   );
 }
 
