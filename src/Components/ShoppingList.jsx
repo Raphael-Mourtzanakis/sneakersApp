@@ -1,7 +1,10 @@
-import { sneakersList } from '../datas/sneakersList'
+import { sneakersList } from '../datas/sneakersList';
+import SneakerItem from './SneakerItem';
+import '../styles/ShoppingList.css';
 
 function ShoppingList() {
     return (
+        /**
         <div>
             <ul>
                 {sneakersList.map((sneaker) => (
@@ -9,6 +12,22 @@ function ShoppingList() {
                 ))}
             </ul>
         </div>
+        **/
+
+      <div className="shopping-list">
+      <h2>Nos Sneakers</h2>
+      <div className="sneakers-grid">
+        {sneakersList.map((sneaker) => (
+          <SneakerItem
+            key={sneaker.id}
+            nom={sneaker.nom}           // Props "nom" passée à l'enfant
+            marque={sneaker.marque}     // Props "marque" passée à l'enfant
+            prix={sneaker.prix}         // Props "prix" passée à l'enfant
+            style={sneaker.style}       // Props "style" passée à l'enfant
+          />
+        ))}
+      </div>
+    </div>
     )
 }
 

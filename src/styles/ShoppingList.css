@@ -1,0 +1,16 @@
+body
+  {
+    font-size: 2.5vh;
+  }
+
+h2
+  {
+    margin-left: 2vh;
+  }
+
+#sneaker-list
+  {
+    display: grid;
+    grid: 5vh;
+    margin-left: 2vh;
+  }
