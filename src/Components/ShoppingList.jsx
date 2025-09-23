@@ -20,10 +20,12 @@ function ShoppingList() {
         {sneakersList.map((sneaker) => (
           <SneakerItem
             key={sneaker.id}
-            nom={sneaker.nom}           // Props "nom" passée à l'enfant
-            marque={sneaker.marque}     // Props "marque" passée à l'enfant
-            prix={sneaker.prix}         // Props "prix" passée à l'enfant
-            style={sneaker.style}       // Props "style" passée à l'enfant
+            nom={sneaker.nom}               // Props "nom" passée à l'enfant
+            marque={sneaker.marque}         // Props "marque" passée à l'enfant
+            prix={sneaker.prix}             // Props "prix" passée à l'enfant
+            style={sneaker.style}           // Props "style" passée à l'enfant
+            esthetique={sneaker.esthetique} // Props "esthetique" passée à l'enfant
+            confort={sneaker.confort}       // Props "confort" passée à l'enfant
           />
         ))}
       </div>
