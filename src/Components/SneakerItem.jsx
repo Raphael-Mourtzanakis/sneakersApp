@@ -22,6 +22,8 @@ function SneakerItem({nom, marque, prix, style, esthetique, confort}) {
           <p className="sneaker-brand">{marque}</p>
           <p className="sneaker-price">{prixFormate}</p>
           <p className="sneaker-style">{style}</p>
+          <p className="sneaker-aesthetic">{esthetique}</p>
+          <p className="sneaker-comfort">{confort}</p>
         </div>
     </div>
       );
