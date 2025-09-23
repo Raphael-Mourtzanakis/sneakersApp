@@ -12,6 +12,10 @@ function SneakerItem(props) {
   );
 }
 **/
+
+import CustomerReview from "./CustomerReview";
+import '../styles/ShoppingItem.css';
+
 function SneakerItem({nom, marque, prix, style, esthetique, confort}) {
   const prixFormate = prix + " €";  // OK : creation d'une nouvelle variable
   const nomMajuscule = nom.toUpperCase();  // OK : transformation locale
@@ -19,11 +23,13 @@ function SneakerItem({nom, marque, prix, style, esthetique, confort}) {
     <div id="sneaker-list" >
         <div className="sneaker-item">
           <h3>{nomMajuscule}</h3>
-          <p className="sneaker-brand">{marque}</p>
-          <p className="sneaker-price">{prixFormate}</p>
-          <p className="sneaker-style">{style}</p>
-          <p className="sneaker-aesthetic">{esthetique}</p>
-          <p className="sneaker-comfort">{confort}</p>
+          <p>{marque}</p>
+          <p>{prixFormate}</p>
+          <p>{style}</p>
+          <div className="sneaker-review">
+            <CustomerReview reviewType="esthétisme" scaleValue={esthetique}/>
+            <CustomerReview reviewType="confort" scaleValue={confort}/>
+          </div>
         </div>
     </div>
       );
