@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+.best-seller {
+  background-color: rgb(203, 174, 142);
+}
+
 .sneaker-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);

@@ -16,12 +16,12 @@ function SneakerItem(props) {
 import CustomerReview from "./CustomerReview";
 import '../styles/SneakerItem.css';
 
-function SneakerItem({nom, marque, prix, style, esthetique, confort, image}) {
+function SneakerItem({nom, marque, prix, style, esthetique, confort, image, bestSeller}) {
   const prixFormate = prix + " €";  // OK : creation d'une nouvelle variable
   const nomMajuscule = nom.toUpperCase();  // OK : transformation locale
   return (
     <div id="sneaker-list" >
-        <div className="sneaker-item">
+        <div className="sneaker-item" ${bestSeller ? 'best-seller' : ''}>
             {/* Emplacement pour la future image */}
             <img  className="sneaker-image" src={image} alt={nom}/>
           <h3>{nomMajuscule}</h3>
