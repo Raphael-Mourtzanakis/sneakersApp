@@ -23,6 +23,7 @@ function SneakerItem({nom, marque, prix, style, esthetique, confort, image, best
     <div id="sneaker-list" >
         <div className={bestSeller ? 'sneaker-item best-seller' : 'sneaker-item'}> {/* Si bestSeller est vrai alors dire que c'est une bonne vente, sinon non */}
             {/* Emplacement pour la future image */}
+            {bestSeller ? <div className="best-seller-badge">Top vente</div> : ''}
             <img  className="sneaker-image" src={image} alt={nom}/>
           <h3>{nomMajuscule}</h3>
           <div className="sneaker-brand">

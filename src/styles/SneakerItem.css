@@ -13,11 +13,17 @@
 
 .best-seller {
   background-color: rgb(203, 174, 142);
+  box-shadow: 0 4px 6px rgba(255, 179, 0, 0.25);
+  border-color: gold;
 }
 
 .sneaker-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.best-seller:hover {
+  box-shadow: 0 8px 25px rgba(255, 179, 0, 0.3);
 }
 
 /* Style pour les images de sneakers */
@@ -63,6 +69,24 @@
   font-size: 0.85rem;
   font-weight: 500;
   margin: 6px 0;  
+}
+.best-seller .sneaker-style {
+  background: rgb(189, 162, 134);
+  color: rgb(78, 63, 55);
+}
+
+/* Badge de best seller */
+.best-seller-badge {
+  position: absolute;
+  top: 8px; right: 8px;
+  background: #ff4444;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: bold;
+  cursor: default;
 }
 
 /* Section des avis */
