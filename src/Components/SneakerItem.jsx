@@ -21,7 +21,7 @@ function SneakerItem({nom, marque, prix, style, esthetique, confort, image, best
   const nomMajuscule = nom.toUpperCase();  // OK : transformation locale
   return (
     <div id="sneaker-list" >
-        <div className="sneaker-item" ${bestSeller ? 'best-seller' : ''}>
+        <div className={bestSeller ? 'sneaker-item best-seller' : 'sneaker-item'}> {/* Si bestSeller est vrai alors dire que c'est une bonne vente, sinon non */}
             {/* Emplacement pour la future image */}
             <img  className="sneaker-image" src={image} alt={nom}/>
           <h3>{nomMajuscule}</h3>

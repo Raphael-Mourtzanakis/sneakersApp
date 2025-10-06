@@ -27,6 +27,7 @@ function ShoppingList() {
             esthetique={sneaker.esthetique} // Props "esthetique" passée à l'enfant
             confort={sneaker.confort}       // Props "confort" passée à l'enfant
             image={sneaker.image}           // Props "image" passée à l'enfant
+            bestSeller={sneaker.bestSeller} // Props "bestSeller" passée à l'enfant
           />
         ))}
       </div>
