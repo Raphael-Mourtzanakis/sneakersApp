@@ -1,20 +1,6 @@
-/**
-function SneakerItem(props) {
-  return (
-    <div id="sneaker-list" >
-        <div className="sneaker-item">
-            <h3>{props.nom}</h3>
-            <p>Marque: {props.marque}</p>
-            <p>Prix: {props.prix} €</p>
-            <p>Style: {props.style}</p>
-        </div>
-    </div>
-  );
-}
-**/
-
 import CustomerReview from "./CustomerReview";
 import '../styles/SneakerItem.css';
+import { useState } from "react"; // Import du hook useState
 
 function SneakerItem({nom, marque, prix, style, esthetique, confort, image, bestSeller}) {
   const prixFormate = prix + " €";  // OK : creation d'une nouvelle variable
@@ -22,13 +8,12 @@ function SneakerItem({nom, marque, prix, style, esthetique, confort, image, best
   const formatReview = (reviewType, scaleValue) => {
         const scaleType = reviewType === "Confort" ? "😌": "💖";
         const icons = scaleType.repeat(scaleValue);
-        return `${reviewType} : ${icons} (${scaleValue}/5)`
+        return `${reviewType} : ${icons} (${scaleValue}/5)`;
     }
-  const handleClickAvis = () => {
-    const esthetismeText = formatReview("Esthétisme", esthetique);
-    const confortText = formatReview("Confort", confort);
-    alert(`Avis pour ${nom} :\n${esthetismeText}\n${confortText}`);
+  const handleToggleAvis = () => {
+    setShowReviews(!showReviews); // Inverse l'état d'affichage
   }
+  const [showReviews, setShowReviews] = useState(false); // État pour gérer l'affichage des avis+
   return (
     <div id="sneaker-list" >
         <div className={`sneaker-item ${bestSeller ? "best-seller" : ""}`}>
@@ -46,9 +31,15 @@ function SneakerItem({nom, marque, prix, style, esthetique, confort, image, best
             <p>{style}</p>
           </div>
           <div className="sneaker-review">
-            <button onClick={handleClickAvis}>Voir les avis</button>
-            <CustomerReview reviewType="Esthétisme" scaleValue={esthetique}/>
-            <CustomerReview reviewType="Confort" scaleValue={confort}/>
+            <button onClick={handleToggleAvis}>
+              {showReviews ? "Masquer les avis" : "Afficher les avis"}
+            </button>
+            {showReviews && (
+              <div className = "avis-details">
+                <CustomerReview reviewType = "Esthétisme" scaleValue = {esthetique}/>
+                <CustomerReview reviewType = "Confort" scaleValue = {confort}/>
+              </div>
+            )}
           </div>
       </div>
     </div>

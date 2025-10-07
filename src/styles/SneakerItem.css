@@ -95,14 +95,21 @@
   padding-top: 12px;  
   margin-top: 12px;  
 }
+.best-seller .sneaker-review {
+  border-top: 1px solid rgb(199, 162, 148);
+  padding-top: 12px;  
+  margin-top: 12px;  
+}
 .sneaker-review > div {
   margin: 6px 0;  
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.best-seller .sneaker-review {
-  border-top: 1px solid rgb(199, 162, 148);
-  padding-top: 12px;  
-  margin-top: 12px;  
+.sneaker-review .avis-details {
+  /* display: block; */
+  display: flex; /* Active le layout flexible */
+  flex-direction: column; /* Éléments en colonne */
+  gap: 8px; /* Espacement entre les avis */
+  margin-top: 10px; /* Séparaton du bouton */
 }
