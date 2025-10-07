@@ -71,7 +71,7 @@
   margin: 6px 0;  
 }
 .best-seller .sneaker-style {
-  background: rgb(189, 162, 134);
+  background: rgb(197, 169, 140);
   color: rgb(78, 63, 55);
 }
 
@@ -100,4 +100,9 @@
   display: flex;
   align-items: center;
   gap: 8px;
+}
+.best-seller .sneaker-review {
+  border-top: 1px solid rgb(199, 162, 148);
+  padding-top: 12px;  
+  margin-top: 12px;  
 }

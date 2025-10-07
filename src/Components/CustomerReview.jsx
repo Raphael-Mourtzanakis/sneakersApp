@@ -2,8 +2,7 @@ import '../styles/CustomerReview.css';
 
 function CustomerReview ({scaleValue, reviewType}) {
     const range = [1, 2, 3, 4, 5]
-    const scaleType = reviewType === "confort" ? "😌": "💖" // Si reviewType est confort alors le définir à "😌", sinon à "💖"
-
+    const scaleType = reviewType === "Confort" ? "😌": "💖" // Si reviewType est confort alors le définir à "😌", sinon à "💖"
     return (
         <div>
             <span>{reviewType} : </span> {/* Affiche "esthétisme :" ou "confort :" */}
