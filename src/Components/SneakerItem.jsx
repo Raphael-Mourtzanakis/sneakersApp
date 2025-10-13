@@ -15,35 +15,32 @@ function SneakerItem({nom, marque, prix, style, esthetique, confort, image, best
   }
   const [showReviews, setShowReviews] = useState(false); // État pour gérer l'affichage des avis+
   return (
-    <div id="sneaker-list" >
-        <div className={`sneaker-item ${bestSeller ? "best-seller" : ""}`}>
-        
-            {bestSeller && <span className="best-seller-badge">Top vente</span>} {/* Badge Top vente*/}
-            <img  className="sneaker-image" src={image} alt={nom}/>
-          <h3>{nomMajuscule}</h3>
-          <div className="sneaker-brand">
-            <p>{marque}</p>
-          </div>
-          <div className="sneaker-price">
-            <p>{prixFormate}</p>
-          </div>
-          <div className="sneaker-style">
-            <p>{style}</p>
-          </div>
-          <div className="sneaker-review">
-            <button onClick={handleToggleAvis}>
-              {showReviews ? "Masquer les avis" : "Afficher les avis"}
-            </button>
-            {showReviews && (
-              <div className = "avis-details">
-                <CustomerReview reviewType = "Esthétisme" scaleValue = {esthetique}/>
-                <CustomerReview reviewType = "Confort" scaleValue = {confort}/>
-              </div>
-            )}
-          </div>
-      </div>
+      <div className={`sneaker-item ${bestSeller ? "best-seller" : ""}`}>
+          {bestSeller && <span className="best-seller-badge">Top vente</span>} {/* Badge Top vente*/}
+          <img  className="sneaker-image" src={image} alt={nom}/>
+        <h3>{nomMajuscule}</h3>
+        <div className="sneaker-brand">
+          <p>{marque}</p>
+        </div>
+        <div className="sneaker-price">
+          <p>{prixFormate}</p>
+        </div>
+        <div className="sneaker-style">
+          <p>{style}</p>
+        </div>
+        <div className="sneaker-review">
+          <button onClick={handleToggleAvis} style={{cursor:"pointer"}}>
+            {showReviews ? "Masquer les avis" : "Afficher les avis"}
+          </button>
+          {showReviews && (
+            <div className = "avis-details">
+              <CustomerReview reviewType = "Esthétisme" scaleValue = {esthetique}/>
+              <CustomerReview reviewType = "Confort" scaleValue = {confort}/>
+            </div>
+          )}
+        </div>
     </div>
-      );
-  }
+  );
+}
 
 export default SneakerItem;

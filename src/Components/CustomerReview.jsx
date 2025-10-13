@@ -6,7 +6,7 @@ function CustomerReview ({scaleValue, reviewType}) {
     return (
         <div>
             <span>{reviewType} : </span> {/* Affiche "esthétisme :" ou "confort :" */}
-            <div style={{display: "inline"}}> {/* Afficher en ligne */}
+            <div style={{display: "inline", cursor: "default"}}> {/* Afficher en ligne et mettre le curseur par défaut en passant la souris dessus */}
                 {range.map((rangeElem) => // Boucle dans la la liste range avec rangeElem comme variable pour la valeur de chaque index
                     scaleValue >= rangeElem ? ( // Si le nombre de ligne actuel est inférieur ou égal à la valeur d'esthétisme ou de confort
                         <span key={rangeElem.toString()}>{scaleType}</span> // Insérer l'émoji 

@@ -44,7 +44,7 @@ h2
   margin: 0 auto;
   justify-items: center;  /* Centre les items dans leurs cellules */
 }
- 
+
 /* Force l'espacement en ajustant la largeur des items */
 .sneakers-grid .sneaker-item {
   max-width: 350px;  /* Largeur maximale pour créer de l'espace */
