@@ -69,10 +69,12 @@
   font-size: 0.85rem;
   font-weight: 500;
   margin: 6px 0;  
+  cursor: default;
 }
 .best-seller .sneaker-style {
   background: rgb(193, 166, 137);
   color: rgb(78, 63, 55);
+  cursor: default;
 }
 
 /* Badge de best seller */
