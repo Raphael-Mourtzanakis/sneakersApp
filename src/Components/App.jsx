@@ -26,7 +26,8 @@ function App() {
   return (
     <>
       < Banner />
-      < ShoppingList />
+      < ShoppingList onAddToCart={addToCart} />
+      < Cart cartItems={cart} />
     </>
   );
 }

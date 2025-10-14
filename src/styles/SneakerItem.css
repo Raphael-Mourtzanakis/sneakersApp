@@ -115,21 +115,37 @@
   gap: 8px; /* Espacement entre les avis */
   margin-top: 10px; /* Séparaton du bouton */
 }
-.avis-button
+
+button
   {
+    cursor: pointer;
     border: none;
     padding: 5px 8px;
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.15);
     transition: background-color 0.15s ease;
   }
-.avis-button:hover
+button:hover
   {
     background-color: rgba(60, 60, 60, 0.15);
     transition: background-color 0.1s ease;
   }
-.avis-button:active
+button:active
   {
     background-color: rgba(0, 0, 0, 0.2);
     transition: background-color 0.05s ease;
+  }
+
+.add-to-cart-btn
+  {
+    margin-top: 8px;
+    background-color: rgba(100, 0, 0, 0.15);
+  }
+.add-to-cart-btn:hover
+  {
+    background-color: rgba(110, 50, 50, 0.15);
+  }
+.add-to-cart-btn:active
+  {
+    background-color: rgba(100, 0, 0, 0.2);
   }
