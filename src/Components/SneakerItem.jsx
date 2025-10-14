@@ -34,6 +34,12 @@ function SneakerItem({sneakerData, onAddToCart}) {
           <p>{style}</p>
         </div>
 
+        <div className="sneaker-actions">
+          <button className="add-to-cart-btn" onClick={handleAddToCart}>
+            🛒 Ajouter au panier
+          </button>
+        </div>
+
         <div className="sneaker-review">
           <button className="avis-btn" onClick={handleToggleAvis}>
             {showReviews ? "Masquer les avis" : "Afficher les avis"}
@@ -44,12 +50,6 @@ function SneakerItem({sneakerData, onAddToCart}) {
               <CustomerReview reviewType = "Confort" scaleValue = {confort}/>
             </div>
           )}
-        </div>
-
-        <div className="sneaker-actions">
-          <button className="add-to-cart-btn" onClick={handleAddToCart}>
-            🛒 Ajouter au panier
-          </button>
         </div>
     </div>
   );

@@ -11,20 +11,23 @@
   box-sizing: border-box;
 }
 
-.best-seller {
-  background-color: rgb(203, 174, 142);
-  box-shadow: 0 4px 6px rgba(255, 179, 0, 0.25);
-  border-color: gold;
-}
+.best-seller 
+  {
+    background-color: rgb(203, 174, 142);
+    box-shadow: 0 4px 6px rgba(255, 179, 0, 0.25);
+    border-color: gold;
+  }
 
-.sneaker-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
+.sneaker-item:hover 
+  {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
 
-.best-seller:hover {
-  box-shadow: 0 8px 25px rgba(255, 179, 0, 0.3);
-}
+.best-seller:hover 
+  {
+    box-shadow: 0 8px 25px rgba(255, 179, 0, 0.3);
+  }
 
 /* Style pour les images de sneakers */
 .sneaker-image {
@@ -138,7 +141,7 @@ button:active
 
 .add-to-cart-btn
   {
-    margin-top: 8px;
+    margin-top: 5px;
     background-color: rgba(100, 0, 0, 0.15);
   }
 .add-to-cart-btn:hover
