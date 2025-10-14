@@ -1,6 +1,6 @@
 import CustomerReview from "./CustomerReview";
 import '../styles/SneakerItem.css';
-import { useState } from "react"; // Import du hook useState
+import {useState} from "react"; // Import du hook useState
 
 function SneakerItem({sneakerData, onAddToCart}) {
   const {nom, marque, prix, style, esthetique, confort, image, bestSeller = false} = sneakerData // Destructuration : extrait les propriétés nécessaires deouis l'objet sneakerData

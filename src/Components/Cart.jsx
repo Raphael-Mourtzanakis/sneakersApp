@@ -1,7 +1,7 @@
 function Cart({cartItems}) {
     return (
-        {cartItems}
+        <span>Blabla</span>
     )
 }
 
-//export default Cart;
+export default Cart;
