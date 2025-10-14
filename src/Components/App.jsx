@@ -1,7 +1,7 @@
 import {useState} from "react";
 import Banner from "./Banner";
 import ShoppingList from "./ShoppingList";
-import Cart from ".\Cart";
+import Cart from "./Cart";
 import "../styles/App.css";
 
 function App() {

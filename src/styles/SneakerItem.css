@@ -113,3 +113,21 @@
   gap: 8px; /* Espacement entre les avis */
   margin-top: 10px; /* Séparaton du bouton */
 }
+.avis-button
+  {
+    border: none;
+    padding: 5px 8px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.15);
+    transition: background-color 0.15s ease;
+  }
+.avis-button:hover
+  {
+    background-color: rgba(60, 60, 60, 0.15);
+    transition: background-color 0.1s ease;
+  }
+.avis-button:active
+  {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.05s ease;
+  }

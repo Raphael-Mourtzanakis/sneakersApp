@@ -5,13 +5,14 @@ function CustomerReview ({scaleValue, reviewType}) {
     const scaleType = reviewType === "Confort" ? "😌": "💖" // Si reviewType est confort alors le définir à "😌", sinon à "💖"
     return (
         <div>
-            <span>{reviewType} : </span> {/* Affiche "esthétisme :" ou "confort :" */}
+            <span className="review-type">{reviewType} : </span> {/* Affiche "esthétisme :" ou "confort :" */}
             <div style={{display: "inline", cursor: "default"}}> {/* Afficher en ligne et mettre le curseur par défaut en passant la souris dessus */}
                 {range.map((rangeElem) => // Boucle dans la la liste range avec rangeElem comme variable pour la valeur de chaque index
                     scaleValue >= rangeElem ? ( // Si le nombre de ligne actuel est inférieur ou égal à la valeur d'esthétisme ou de confort
                         <span key={rangeElem.toString()}>{scaleType}</span> // Insérer l'émoji 
                     ) : null // Sinon, ne rien insérer
                 )}
+            <span className="review-scale"> ({scaleValue}/5)</span>
             </div>
         </div>
     )

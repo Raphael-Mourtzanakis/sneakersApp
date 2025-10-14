@@ -29,7 +29,7 @@ function SneakerItem({nom, marque, prix, style, esthetique, confort, image, best
           <p>{style}</p>
         </div>
         <div className="sneaker-review">
-          <button onClick={handleToggleAvis} style={{cursor:"pointer"}}>
+          <button className="avis-button" onClick={handleToggleAvis} style={{cursor:"pointer"}}>
             {showReviews ? "Masquer les avis" : "Afficher les avis"}
           </button>
           {showReviews && (
