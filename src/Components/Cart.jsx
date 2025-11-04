@@ -1,3 +1,5 @@
+import '../styles/Cart.css';
+
 function Cart({cartItems}) {
     const totalItems = cartItems.reduce((sum, item) =>
         sum + item.quantity,0);
@@ -6,43 +8,41 @@ function Cart({cartItems}) {
     if (cartItems.length === 0) {
         return (
             <div className="cart">
-            <div className="cart-header">
-                <h2>Mon Panier</h2>
-            </div>
-            <div className="empty-cart">
-                <div className="empty-cart-icon">🛒</div>
-                <h3>Votre panier est vide</h3>
-                <p>
-                Découvrez notre collection de sneakers et ajoutez vos modèles préférés !
-                </p>
-            </div>
+                <div className="cart-header">
+                    <h2>Mon Panier</h2>
+                </div>
+                <div className="empty-cart">
+                    <div className="empty-cart-icon">🛒</div>
+                    <h3>Votre panier est vide</h3>
+                    <p>
+                    Découvrez notre collection de sneakers et ajoutez vos modèles préférés !
+                    </p>
+                </div>
             </div>
         );
     } else {
         return (
             <div className="cart">
                 <div className="cart-header">
-                <h2>Mon Panier ({totalItems})</h2>
+                    <h2>Mon Panier ({totalItems})</h2>
                 </div>
 
                 <div className="cart-items">
-                {cartItems.map(item => (
-                    <div key={item.id} className="cart-item">
-                    <img
-                        src={item.image}
-                        alt={item.nom}
-                        className="cart-item-image"
-                    />
-                    <div className="cart-item-details">
-                        <h4>{item.nom}</h4>
-                        <p>{item.marque}</p>
-                        <p>Quantité : {item.quantity}</p>
-                        <p className="cart-item-price">
-                        {item.prix * item.quantity}€
-                        </p>
-                    </div>
-                    </div>
-                ))}
+                    {cartItems.map(item => (
+                        <div key={item.id} className="cart-item">
+                        <img
+                            src={item.image}
+                            alt={item.nom}
+                            className="cart-item-image"
+                        />
+                        <div className="cart-item-details">
+                            <h4>{item.nom}</h4>
+                            <p className="cart-brand">{item.marque}</p>
+                            <p className="cart-item-quantity">Quantité : {item.quantity}</p>
+                            <p className="cart-item-price">{item.prix * item.quantity} €</p>
+                        </div>
+                        </div>
+                    ))}
                 </div>
 
                 <div className="cart-summary">
