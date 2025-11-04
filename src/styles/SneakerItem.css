@@ -39,9 +39,9 @@
   display: block;
 }
 
-.sneaker-item h3 {
+.sneaker-item h4 {
   margin: 0 0 8px 0;  
-  font-size: 1.3rem;  
+  font-size: 1.2rem;  
   color: #1f2937;
   font-weight: 600;
 }
